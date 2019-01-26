@@ -1,0 +1,1 @@
+<footer>stringChainReplacements - <?= date('Y') ?></footer>

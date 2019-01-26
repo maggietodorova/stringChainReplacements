@@ -1,28 +1,33 @@
-<?php
-<<<<<<< HEAD
-
-function stringChainReplacements($stringArray) {
-    if(count($stringArray) <= 1) {
-        return 0;
-    }
-
-    $counter = 0;
-
-    for($i = 0; $i < count($stringArray) - 1; $i += 1) {
-        $first = substr($stringArray[$i + 1], 0, 1);
-        $last = substr($stringArray[$i], -1);
-        if(strlen($stringArray[$i]) > 1 && strlen($stringArray[$i + 1]) > 1) {
-            if($last !== $first) {
-                $counter += 1;
-            }  
-        } else {
-            if($first !== $last) {
-                $stringArray[$i] = $stringArray[$i + 1];
-                $counter += 1;
+<?php include './functions.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <?php include './includes/header.php'; ?>
+    <main>
+        <form action="index.php" method="GET">
+            <label>Масив от стрингове:</label>
+            <input type="text" name="string_array">
+            <button type="submit">Изчисли</button>
+        </form>
+        <p>Въведете отделните елементи от масива със запетайка и интервал след това. Не слагайте кавички на отделните стрингове!</p>
+        <?php
+            if(!empty($_GET)) {
+                $stringArray = $_GET['string_array'];
+                $stringArray = explode(', ', $stringArray);
+                if($stringArray === '') {
+                    echo 'err';
+                } else {
+                    echo stringChainReplacements($stringArray);
+                }
             }
-        }
-    
-    return $counter;
-}
-}
-echo stringChainReplacements(["abc", "a", "b", "c", "def", "g", "ghi"]);
+        ?>
+    </main>
+    <?php include './includes/footer.php'; ?>
+</body>
+</html>
