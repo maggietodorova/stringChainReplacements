@@ -13,17 +13,6 @@ function stringChainReplacements($stringArray) {
         if($last !== $first) {
             $counter += 1;
         }  
-            // echo $first. ' ' . $last . '<br>'
-        // if (strlen($stringArray[$i+1]) ===1) {
-        //     $j = $i + 1;
-        //     while (strlen($stringArray[$j]) === 1 && $j < count($stringArray) - 1) {
-        //         if ($stringArray[$i][strlen($stringArray[$i]) - 1] == $stringArray[$j][0]){
-        //             $counter -= 1;
-        //         }
-        //     }
-        // }
-    }
-    // echo 'c - ' . $c . '<br>';
     return $counter;
 }
 
