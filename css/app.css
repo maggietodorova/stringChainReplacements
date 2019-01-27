@@ -1,0 +1,30 @@
+html {
+    font-family: monospace;
+    font-size: 18px;
+}
+
+header, footer {
+    color: #fff;
+    background-color: darkblue;
+    font-size: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+main {
+    padding: 6rem;
+    background-color: lightblue;
+}
+
+button {
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: darkblue;
+    border: 0;
+    padding: 15px 20px;
+}
+
+.italic {
+    font-style: italic;
+}
